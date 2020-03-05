@@ -9,9 +9,9 @@
 
   .todo__main
     .todo__main__new
-      -# = form_for [@todo] do |f|
-      -#   = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'
-      -#   = f.submit '作成', class: 'todo__main__new__btn'
+      = form_for [@task] do |f|
+        = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'
+        = f.submit '作成', class: 'todo__main__new__btn'
     .todo__main__list
       .todo__main__list__to-do
         買い物リスト
