@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create
+    @task = Task.create(task_params)
   end
 
   private
