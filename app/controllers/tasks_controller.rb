@@ -5,7 +5,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create
+    @task = Task.create(task_params)
+    if @task.save
+      redirect_to tasks_path(@task), notice: 'ToDoが作成されました'
+    else
+      flash.now[:alert] = 'ToDoを入力してください。'
+      render :index
+    end
   end
 
   private
