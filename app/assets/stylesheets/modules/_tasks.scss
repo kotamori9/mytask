@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.todo__header{
+  height: 100px;
+  width: 100%;
+  background-color:grey;
+  line-height: 100px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &__box1{
+    width: 50%;
+    font-size: 40px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  &__box2{
+    width: 30%;
+    margin-right: 30px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    &__name{
+      color: white;
+      font-size: 30px;
+      height: 20px;
+      width: 60%;
+      line-height: 20px;
+      margin-top: 40px;
+
+      &__cog-btn{
+        height: 20px;
+        width: 10%;
+        line-height: 20px;
+        margin-top: 35px;
+        color:white;
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+.todo__main{
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-color: lightgray;
+  position: absolute;
+
+  &__new{
+    height: 100px;
+    margin: 30px 30px 0px 30px;
+    position: relative;
+
+    .new_todo{
+      height: 50%;
+      width: 100%;
+      top: 25px;
+      display: flex;
+      justify-content: space-between;
+     }
+    
+    &__form{
+      height: 100%;
+      width: 80%;
+      top: 25px;
+      margin-left: 20px;
+      line-height: 50px;
+      font-size: 20px;
+      background-color: white;
+      position: relative;
+    }
+
+    &__btn{
+      height: 50px;
+      width: 10%;
+      top:25px;
+      background-color: honeydew;
+      line-height: 50px;
+      font-size: 20px;
+      margin-right: 20px;
+      position: relative;
+    }
+  }
+
+  &__list{
+    background-color: hotpink;
+    margin: 0px 30px 30px 30px;
+
+    &__to-do{
+      background-color: yellow;
+      height:100px;
+      line-height: 50px;
+      margin-top: 30px;
+    }
+  }
+}
