@@ -10,8 +10,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to root_path(@task), notice: 'ToDoが作成されました'
     else
-      flash.now[:alert] = 'ToDoを入力してください。'
-      render :index
+      redirect_to root_path(@task), alert: 'ToDoを入力してください。'
     end
   end
 
