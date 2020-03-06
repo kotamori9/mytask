@@ -20,6 +20,10 @@ class TasksController < ApplicationController
     redirect_to root_path(@task), alert: 'ToDoが削除されました'
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   private
 
   def task_params

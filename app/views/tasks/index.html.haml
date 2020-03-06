@@ -16,5 +16,5 @@
     .todo__main__list
       - @tasks.each do |task|
         .todo__main__list__to-do
-          = task.content
-          =link_to '削除', "/tasks/#{task.id}", method: :delete
+          = link_to "#{task.content}", "/tasks/#{task.id}", method: :get
+          = link_to '削除', "/tasks/#{task.id}", method: :delete
