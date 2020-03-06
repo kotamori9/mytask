@@ -13,6 +13,6 @@
         = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'
         = f.submit '作成', class: 'todo__main__new__btn'
     .todo__main__list
-      .todo__main__list__to-do
-        - @tasks.each do |task|
+      - @tasks.each do |task|
+        .todo__main__list__to-do
           = task.content
