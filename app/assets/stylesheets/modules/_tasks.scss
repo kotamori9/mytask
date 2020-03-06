@@ -84,7 +84,7 @@
       height: 50px;
       width: 10%;
       top:25px;
-      background-color: honeydew;
+      background-color: gray;
       line-height: 50px;
       font-size: 20px;
       margin-right: 20px;
@@ -93,15 +93,15 @@
   }
 
   &__list{
-    background-color: hotpink;
     margin: 0px 30px 30px 30px;
 
     &__to-do{
-      background-color: yellow;
+      background-color: white;
       height:100px;
+      font-size: 20px;
       line-height: 50px;
       margin-top: 30px;
-      width: 100px;
+      width: 100％;
     }
   }
 }
