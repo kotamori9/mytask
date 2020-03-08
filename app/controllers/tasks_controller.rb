@@ -23,6 +23,7 @@ class TasksController < ApplicationController
   def show
     @tasks =Task.all
     @task = Task.find(params[:id])
+    @date = Task.new
   end
 
   private
