@@ -1,19 +1,19 @@
 .todo
   .todo__header
     .todo__header__box1
-      TODOリスト
+      =@task.content
     .todo__header__box2
       .todo__header__box2__name
         = current_user.name
 
-  .todo__main
-    .todo__main__new
-      = form_for [@date] do |f|
-        = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'
-        = f.date_field :date, class: 'todo__main__new__date'
-        = f.submit '作成', class: 'todo__main__new__btn'
-    .todo__main__list
-      - @tasks.each do |task|
-        .todo__main__list__to-do
-          = link_to "#{task.content}", "/tasks/#{task.id}", method: :get
-          = link_to '削除', "/tasks/#{task.id}", method: :delete
+  -# .todo__main
+  -#   .todo__main__new
+  -#     = form_for [@date] do |f|
+  -#       = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'
+  -#       = f.date_field :date, class: 'todo__main__new__date'
+  -#       = f.submit '作成', class: 'todo__main__new__btn'
+  -#   .todo__main__list
+  -#     - @tasks.each do |task|
+  -#       .todo__main__list__to-do
+  -#         = link_to "#{task.content}", "/tasks/#{task.id}", method: :get
+  -#         = link_to '削除', "/tasks/#{task.id}", method: :delete

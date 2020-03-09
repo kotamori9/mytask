@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root "tasks#index"
 
   resources :users, only: [:edit, :update, :destroy]
-  resources :tasks, only: [:index,:new,:create,:show,:destroy] 
+  resources :tasks, only: [:index,:new,:create,:show,:destroy] do
+    resources :todos,only: [:index,:new,:create,:show,:destroy] 
+  end
   
 end
