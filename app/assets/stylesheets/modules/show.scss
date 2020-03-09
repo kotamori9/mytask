@@ -57,7 +57,7 @@
     margin: 30px 30px 0px 30px;
     position: relative;
 
-    .new_task{
+    .edit_task{
       height: 50%;
       width: 100%;
       top: 25px;
@@ -78,6 +78,12 @@
       font-size: 20px;
       background-color: white;
       position: relative;
+    }
+
+    &__date{
+      position: relative;
+      background-color: red;
+      top: 25px;
     }
 
     &__btn{
