@@ -19,7 +19,7 @@ class TodosController < ApplicationController
 
   private
   def todo_params
-    params.require(:todo).permit(:todo).merge(user_id: current_user.id, task_id: params[:task_id])
+    params.require(:todo).permit(:todo,:date).merge(user_id: current_user.id, task_id: params[:task_id])
   end
 
 end
