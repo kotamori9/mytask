@@ -15,6 +15,7 @@
         = f.submit '作成', class: 'todo__main__new__btn'
     .todo__main__list
       - @todos.each do |todo|
-        .todo__main__list__to-do
-          = "#{todo.todo}"
-          = link_to '削除',"/tasks/task_id/todos/#{todo.id}", method: :delete
+        - if @task == todo.task_id
+          .todo__main__list__to-do
+            = "#{todo.todo}"
+            = link_to '削除',"/tasks/task_id/todos/#{todo.id}", method: :delete
