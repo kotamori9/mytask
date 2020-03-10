@@ -17,6 +17,13 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    todo = Todo.find(params[:id])
+    flash[:alert]='ToDoを削除しました'
+    todo.destroy
+    return_back and return 
+  end
+
   private
   def todo_params
     params.require(:todo).permit(:todo,:date).merge(user_id: current_user.id, task_id: params[:task_id])
