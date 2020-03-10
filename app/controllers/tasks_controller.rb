@@ -21,8 +21,8 @@ class TasksController < ApplicationController
   end
 
   def show
-    @tasks =Task.all
     @task = Task.find(params[:id])
+    @todos = Todo.all
   end
 
   private

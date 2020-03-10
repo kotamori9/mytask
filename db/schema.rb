@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20200309035342) do
     t.string   "todo"
     t.string   "task_id"
     t.string   "user_id"
-    t.string   "date"
+    t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
