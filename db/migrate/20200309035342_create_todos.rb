@@ -4,7 +4,7 @@ class CreateTodos < ActiveRecord::Migration[5.0]
       t.string :todo
       t.string :task_id
       t.string :user_id
-      t.date :date
+      t.date :enddate
       t.timestamps
     end
   end
