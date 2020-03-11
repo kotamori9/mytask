@@ -22,7 +22,6 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-    @todo =Todo.where(params[:id]).all
     @todos = Todo.all
   end
 
