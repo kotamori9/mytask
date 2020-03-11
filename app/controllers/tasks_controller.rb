@@ -22,13 +22,13 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-    @todos = Todo.all
+    @today = Date.today
   end
 
   private
 
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content).merge(user_id: current_user.id)
   end
 
 end

@@ -5,7 +5,7 @@
 .todo__header{
   height: 100px;
   width: 100%;
-  background-color:grey;
+  background-color:green;
   line-height: 100px;
   padding-left: 30px;
   display: flex;
@@ -54,8 +54,9 @@
 .todo__main{
   height: calc(100vh - 100px);
   width: 100%;
-  background-color: lightgray;
+  background-color: greenyellow;
   position: absolute;
+  overflow: scroll;
 
   &__new{
     height: 100px;
