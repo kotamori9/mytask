@@ -18,7 +18,8 @@
       - @task.todos.each do |task|
         .todo__main__list__to-do
           = task.todo
-          = "終了予定日 #{task.enddate}"
-          = "残り#{(task.enddate - @today).to_i}日"
+          = "終了予定日:#{task.enddate}"
+          = "残り:#{(task.enddate - @today).to_i}日"
+          = "担当者:#{task.user.name}"
           = link_to '削除',"/tasks/:task_id/todos/#{task.id}", method: :delete
           
