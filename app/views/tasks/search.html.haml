@@ -1,18 +1,8 @@
-.todo
-  .todo__header
-    .todo__header__box1
-      TODOリスト
-    .todo__header__box2
-      .todo__header__box2__name
-        = current_user.name
-      = link_to edit_user_path(current_user) do
-        = icon('fas', 'cog', class: 'todo__header__box2__name__cog-btn')
-    = form_for search_tasks_path do |form| 
+= form_for serch_tasks_path do |form| 
       = form.text_field :keyword, class: 'search-input', placeholder: '投稿を検索する'
       = form.submit "検索", class: "search-btn" 
-
-
-  .todo__main
+end
+.todo__main
     .todo__main__new
       = form_for [@task] do |f|
         = f.text_field :content, class: 'todo__main__new__form', placeholder: '新しいToDoを入力してください'

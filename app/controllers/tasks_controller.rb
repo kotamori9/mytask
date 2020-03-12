@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @tasks =Task.all
@@ -23,6 +24,10 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @today = Date.today
+  end
+
+  def search
+    @tasks = Task.search(params[:keyword])
   end
 
   private
