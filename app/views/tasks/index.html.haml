@@ -7,11 +7,11 @@
         = current_user.name
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog', class: 'todo__header__box2__name__cog-btn')
-    = form_for search_tasks_path do |form| 
-      = form.text_field :keyword, class: 'search-input', placeholder: '投稿を検索する'
-      = form.submit "検索", class: "search-btn" 
+    = form_tag search_tasks_path,method: 'get' do 
+      = text_field_tag :keyword
+      = submit_tag '検索',name: :nil
 
-
+   
   .todo__main
     .todo__main__new
       = form_for [@task] do |f|
