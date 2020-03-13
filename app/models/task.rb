@@ -5,11 +5,8 @@ class Task < ApplicationRecord
 
   # 検索機能
   def self.search(search)
-    if search
-      Task.where('name LIKE(?)', "%#{search}%")
-    else
-      Task.all
-    end
+    return Task.all unless search
+    Task.where(['content LIKE ?', "%#{search}%"])
   end
 
 end
