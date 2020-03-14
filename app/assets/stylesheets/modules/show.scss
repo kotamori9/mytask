@@ -102,6 +102,10 @@
       margin-right: 20px;
       position: relative;
     }
+
+    &__btn:hover{
+      background-color: #59b1eb;
+    }
   }
 
   &__list{
@@ -113,7 +117,9 @@
       font-size: 20px;
       line-height: 100px;
       margin-top: 30px;
+      margin-bottom: 10px;
       width: 100％;
+      box-shadow: 10px 10px;
 
       a{
         color: black;
