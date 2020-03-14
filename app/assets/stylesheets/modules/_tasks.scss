@@ -9,7 +9,7 @@
   line-height: 100px;
   padding-left: 30px;
   display: flex;
-  justify-content: space-between;
+  
 
   &__box1{
     width: 50%;
@@ -23,7 +23,7 @@
     margin-right: 30px;
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    
 
     &__name{
       color: white;
@@ -41,6 +41,7 @@
         color:white;
         font-size: 30px;
       }
+      
 
     }
   }

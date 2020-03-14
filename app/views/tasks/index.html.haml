@@ -7,7 +7,12 @@
         = current_user.name
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog', class: 'todo__header__box2__name__cog-btn')
+    = form_tag search_tasks_path,method: 'get' do
+      = "ToDo検索" 
+      = text_field_tag :keyword," ",placeholder: "Enter Your name"
+      = submit_tag '検索',content: :nil
 
+   
   .todo__main
     .todo__main__new
       = form_for [@task] do |f|
@@ -18,3 +23,4 @@
         .todo__main__list__to-do
           = link_to "#{task.content}", "/tasks/#{task.id}", method: :get
           = link_to '削除', "/tasks/#{task.id}", method: :delete
+          
