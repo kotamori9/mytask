@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-
+  
+  
   root "tasks#index"
+  devise_for :users
+  post '/tasks/guest_sign_in', to: 'homes#new_guest'
+
+  
 
   resources :users, only: [:edit, :update, :destroy]
   resources :tasks, only: [:index,:new,:create,:show,:destroy] do
